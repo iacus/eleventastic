@@ -1,0 +1,197 @@
+
+$black:                       #000;
+$brown:                       #3A2518;
+$light-brown:                 #E5B5A3;
+$orange:                      #A3523D;
+$light-orange:                #B55132;
+$blue:                        #90C7BB;
+$cream:                       #E8D0C4;
+
+$primary:                     $brown;
+$secondary:                   $cream;
+
+
+$font-family-sans-serif:      "Cera", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" ;
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace ;
+$font-family-serif:           "Chap",SSFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace ;
+$font-family-base:            $font-family-serif ;
+
+$font-weight-base:            $font-weight-light;
+$line-height-base:            1.2;
+
+$headings-line-height:        1;
+
+$headings-margin-bottom:      0;
+
+$grid-gutter-width:          5rem;
+
+$border-width:                2px;
+
+$zindex-sections:                        1040;
+$zindex-newsletter:                      1050;
+$zindex-nav:                             1060;
+$zindex-close:                           1070;
+
+$spacer: 1rem ;
+$spacers: () ;
+
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 2),
+    5: ($spacer * 3)
+  ),
+  $spacers
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 2000px
+);
+
+$container-max-widths: (
+  sm: 590px,
+  md: 500px,
+  lg: 600px,
+  xl: 700px
+);
+
+
+$enable-responsive-font-sizes:    false ;
+
+
+$my-colors: () !default;
+
+$my-colors-set: map-merge(
+  (
+    "color-set-01": (
+      "color": $brown,
+      "bg": $white,
+      "hover": $orange,
+      "muted": $gray-600
+    ),
+    "color-set-02": (
+      "color": $cream,
+      "bg": $orange,
+      "hover": $brown,
+      "muted": $gray-600
+    ),
+    "color-set-03": (
+      "color": $brown,
+      "bg": $cream,
+      "hover": $brown,
+      "muted": $gray-600
+    ),
+    "color-set-04": (
+      "color": $brown,
+      "bg": $blue,
+      "hover": $orange,
+      "muted": $gray-600
+    ),
+    "color-set-05": (
+      "color": $blue,
+      "bg": $brown,
+      "hover": $black,
+      "muted": $gray-600
+    ),
+    "color-set-06": (
+      "color": $brown,
+      "bg": $light-orange,
+      "hover": $cream,
+      "muted": $gray-600
+    ),
+    "color-set-07": (
+      "color": $cream,
+      "bg": $brown,
+      "hover": $black,
+      "muted": $gray-600
+    ),
+    "color-set-08": (
+      "color": $orange,
+      "bg": $blue,
+      "hover": $orange,
+      "muted": $gray-600
+    ),
+    "color-set-09": (
+      "color": $white,
+      "bg": $brown,
+      "hover": $black,
+      "muted": $gray-600
+    ),
+  ),
+  $my-colors
+);
+
+
+$my-type: () !default;
+
+$my-type-set: map-merge(
+  (
+    "text-02": (
+      "family": $font-family-serif,
+      "weight": $font-weight-base,
+      "size": .9rem,
+      "lh": .9rem,
+      "size-sm": 1rem,
+      "lh-sm": 1rem,
+      "size-md": .8rem,
+      "lh-md": .85rem,
+      "size-lg": 1rem,
+      "lh-lg": 1rem,
+      "size-xl": 1.1rem,
+      "lh-xl": 1.1rem,
+    ),
+    "text-03": (
+      "family": $font-family-serif,
+      "weight": $font-weight-base,
+      "size": 1.2rem,
+      "lh": 1.25rem,
+      "size-sm": 1.2rem,
+      "lh-sm": 1.25rem,
+      "size-md": .8rem,
+      "lh-md": .85rem,
+      "size-lg": 1rem,
+      "lh-lg": 1rem,
+      "size-xl": 1.1rem,
+      "lh-xl": 1.1rem,
+      "size-xxl": 1.3rem,
+      "lh-xxl": 1.4rem,
+    ),
+    "text-01": (
+      "family": $font-family-serif,
+      "weight": $font-weight-base,
+      "size": .65rem,
+      "lh": .65rem,
+      "size-sm": .65rem,
+      "lh-sm": .65rem,
+      "size-md": .55rem,
+      "lh-md": .60rem,
+      "size-lg": .60rem,
+      "lh-lg": .65rem,
+      "size-xl": .65rem,
+      "lh-xl": .70rem,
+    ),
+    "display-01": (
+      "family": $font-family-serif,
+      "weight": $font-weight-base,
+      "size": 3rem,
+      "lh": 3rem,
+      "size-sm": 3.6rem,
+      "lh-sm": 3.6rem,
+      "size-md": 3rem,
+      "lh-md": 3rem,
+      "size-lg": 3rem,
+      "lh-lg": 3rem,
+      "size-xl": 3.5rem,
+      "lh-xl": 3.5rem,
+    )
+  ),
+  $my-type
+);

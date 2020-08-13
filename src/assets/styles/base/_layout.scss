@@ -1,7 +1,47 @@
 // Main Site Layout
 
+html {
+  @include fluid-type(576px, 1800px, 17px, 26px);
+}
+
 body {
-    overflow-x: hidden;
+   font-family: $font-family-base;
+   color: $primary;
+   background-color: $secondary;
+   line-height: $line-height-base;
+   overflow-x: hidden;
+
+   &.open {
+      overflow: hidden;
+   }
+
+   &.show-breakpoints::after{
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    content: "mobile";
+    padding: 10px;
+    background-color: red;
+    @include media-breakpoint-up (xs) {
+      content: "xs " attr(data-width);
+    }
+    @include media-breakpoint-up (sm) {
+      content: "small " attr(data-width);
+    }
+    @include media-breakpoint-up (md) {
+      content: "medium " attr(data-width);
+    }
+    @include media-breakpoint-up (lg) {
+      content: "large " attr(data-width);
+    }
+    @include media-breakpoint-up (xl) {
+      content: "xl " attr(data-width);
+    }
+    @include media-breakpoint-up (xxl) {
+      content: "xxl " attr(data-width);
+    }
+  }
 }
 
 .layout {
