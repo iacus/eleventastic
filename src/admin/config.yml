@@ -1,0 +1,37 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: "src/assets/images"
+public_folder: "/images"
+site_url: https://{{meta.title}.netlify.com
+display_url: https://{{meta.title}.netlify.com
+logo_url: "/images/logo.svg"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    description: >
+      Pages.
+    delete: false
+    create: false
+    editor:
+      preview: false
+    files:
+      - label: "Sections"
+        name: "index"
+        file: "src/data/index.md"
+        fields:
+        - label: Blocks
+          name: blocks
+          widget: list
+          fields:
+            - label: Title
+              name: title
+              widget: string
+              required: false
+            - label: Text
+              name: text
+              widget: markdown
+              required: false
+        - {label: "Layout", name: "layout", widget: "hidden", default: "index.njk"}
